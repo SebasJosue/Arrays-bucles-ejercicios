@@ -11,22 +11,18 @@
 
     'use strict';
 
-let nums = [0, 2, 4, 8];
+    let numbers = [2, 4, 8, 24, 28, 48];
 
-function imprimirTabla(nums) {
-  let tabla = "";
-  for (let i = 0; i < 4; i++) {
-    let fila = "";
-    for (let j = i + 1; j < 4; j++) { // Comenzamos j desde i + 1 para evitar repeticiones
-      let numero = i * 2 * 10 + nums[j];
-      fila += `${numero < 10 ? '0' + numero : numero} `;
-    }
-    if (fila !== "") { // Solo agregamos la fila si no está vacía
-      tabla += fila + "\n";
-    }
+    function generateCombinations(numbers) {
+      
+      for (let i = 0; i < numbers.length; i++) {
+          for (let j = i + 1; j < numbers.length; j++) {
+              alert(`${numbers[i]} ${numbers[j]}`);
+          }
+      }
+  
+  
   }
-  return tabla;
-}
-
-let tablaNumeros = imprimirTabla(nums);
-alert(tablaNumeros);
+  
+  generateCombinations(numbers);
+  
